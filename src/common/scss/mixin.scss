@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+// 阴影
+@mixin box-shadow {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+
+// 一行省略
+@mixin omit {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+// 多行省略
+@mixin omits($num) {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  line-clamp: $num;
+  -webkit-box-orient: vertical;
+}

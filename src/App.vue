@@ -1,32 +1,31 @@
+<!--
+ * @Description:
+ * @Version: 2.0
+ * @Autor: Yaowen Liu
+ * @Date: 2021-02-26 13:22:10
+ * @LastEditors: Yaowen Liu
+ * @LastEditTime: 2021-03-02 14:12:46
+-->
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <web-header />
+    <div class="web-container">
+      <router-view />
     </div>
-    <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import WebHeader from '@/components/WebHeader';
+export default {
+  components: {
+    WebHeader
   }
+};
+</script>
+
+<style lang="scss">
+.web-container {
+  padding-top: 60px;
 }
 </style>
